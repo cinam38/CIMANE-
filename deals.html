@@ -1,0 +1,216 @@
+<!-- deals.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academy Cinemas - Deals</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: #575757;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .topGap {
+            height: 20px;
+        }
+
+        .footerBackground {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .footerTitle {
+            font-weight: 500;
+        }
+
+        .footerDes {
+            margin: 0;
+        }
+
+        .footerDesLink {
+            cursor: pointer;
+            color: white;
+        }
+
+        .footerDesLink:hover {
+            text-decoration: underline;
+        }
+
+        .linkColour {
+            color: white;
+            margin-right: 10px;
+        }
+
+        .linkColour:hover {
+            color: #ccc;
+        }
+
+        .facebookIcon,
+        .twitterIcon,
+        .youtubeIcon {
+            font-size: 20px;
+        }
+
+        .logoFooter {
+            width: 80px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .footerDarkerBackground {
+            background-color: #444;
+            padding: 10px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .underlineHeadings {
+            text-decoration: underline;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- The shared navigation bar will be inserted here -->
+    </header>
+
+    <main>
+        <div class="container topGap"></div>
+        <div class="container">
+            <h2>Special Deals at Academy Cinemas</h2>
+            <p>Check out our monthly deals...</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Deal Name</th>
+                        <th>Description</th>
+                        <th>Discount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Student Discount</td>
+                        <td>Special discount on all movie tickets for students</td>
+                        <td>15%</td>
+                    </tr>
+                    <tr>
+                        <td>Family Bundle</td>
+                        <td>Two adult tickets and two children's tickets</td>
+                        <td>$40</td>
+                    </tr>
+                    <tr>
+                        <td>Popcorn Combo</td>
+                        <td>Two large popcorns and two soft drinks</td>
+                        <td>$15</td>
+                    </tr>
+                    <tr>
+                        <td>Early Bird Special</td>
+                        <td>Tickets before 5 PM</td>
+                        <td>10% off</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footerBackground">
+            <footer>
+                <div style="display: flex; justify-content: space-around;">
+                    <div>
+                        <h4 class="footerTitle">Contact Us</h4>
+                        <p class="footerDes"><span class="footerDesLink">Get in touch</span><br><span class="footerDesLink">FAQ's</span><br>
+                            <a class="linkColour" href="https://www.facebook.com"><i class="fa fa-facebook facebookIcon"></i></a>
+                            <a class="linkColour" href="https://twitter.com"><i class="fa fa-twitter twitterIcon"></i></a>
+                            <a class="linkColour" href="https://www.youtube.com"><i class="fa fa-youtube-play youtubeIcon"></i></a>
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="footerTitle">About Academy Cinemas</h4>
+                        <p class="footerDes">
+                            <span class="footerDesLink">About Us</span><br>
+                            <span class="footerDesLink">Cinema Experience</span><br>
+                            <span class="footerDesLink">Gift Cards</span><br>
+                            <span class="footerDesLink">Competitions</span>
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="footerTitle">Legal</h4>
+                        <p class="footerDes">
+                            <span class="footerDesLink">Terms and Conditions</span><br>
+                            <span class="footerDesLink">Privacy Policy</span><br>
+                            <span class="footerDesLink">Accessibility</span>
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div class="footerDarkerBackground">
+            <img class="logoFooter" src="Logo.png" alt="Academy Cinemas Logo">
+        </div>
+    </footer>
+
+    <!-- Include shared navigation bar script -->
+    <script src="navbar.js"></script>
+</body>
+</html>

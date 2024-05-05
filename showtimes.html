@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showtimes - Academy Cinemas</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: #575757;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .topGap {
+            height: 20px;
+        }
+
+        .footerBackground {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .footerTitle {
+            font-weight: 500;
+        }
+
+        .footerDes {
+            margin: 0;
+        }
+
+        .footerDesLink {
+            cursor: pointer;
+            color: white;
+        }
+
+        .footerDesLink:hover {
+            text-decoration: underline;
+        }
+
+        .linkColour {
+            color: white;
+            margin-right: 10px;
+        }
+
+        .linkColour:hover {
+            color: #ccc;
+        }
+
+        .facebookIcon,
+        .twitterIcon,
+        .youtubeIcon {
+            font-size: 20px;
+        }
+
+        .logoFooter {
+            width: 80px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .footerDarkerBackground {
+            background-color: #444;
+            padding: 10px 0;
+        }
+
+        .card-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .card {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-block {
+            padding: 15px;
+            flex: 1;
+        }
+
+        .card-block h4 {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        .badge-info {
+            display: inline-block;
+            background-color: #17a2b8;
+            color: white;
+            padding: 5px 10px;
+            margin: 5px 5px 0 0;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .card-footer {
+            padding: 10px 15px;
+            background-color: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+            text-align: right;
+            font-size: 12px;
+            color: #6c757d;
+        }
+
+        .showtimes-list {
+            width: 100%;
+            max-width: 300px;
+            margin: 20px 0;
+        }
+
+        .showtimes-list h3 {
+            margin-bottom: 10px;
+        }
+
+        .showtimes-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .showtimes-list ul li {
+            background-color: #ffffff;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .showtimes-list ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .header {
+            text-align: center;
+            background-color: #17a2b8;
+            color: white;
+            padding: 60px 0;
+            margin-top: 70px;
+        }
+
+        .header h1 {
+            font-size: 48px;
+        }
+
+        .header p {
+            font-size: 18px;
+        }
+
+        footer {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer ul li {
+            margin: 0 10px;
+        }
+
+        footer ul li a,
+        footer ul li small {
+            text-decoration: none;
+            color: black;
+        }
+
+        footer ul li small.active {
+            font-weight: bold;
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <!-- The shared navigation bar will be inserted here -->
+    </header>
+
+    <main>
+        <div class="container topGap"></div>
+        <div class="container">
+            <h2>Showtimes at Academy Cinemas</h2>
+            <p>Check out the showtimes for the latest movies...</p>
+
+            <div class="card-group">
+                <div class="card" id="kong">
+                    <img src="./img/kongskullisland.jpg" alt="Kong: Skull Island">
+                    <div class="card-block">
+                        <h4>Kong: Skull Island</h4>
+                        <span class="badge-info">12:00 PM</span>
+                        <span class="badge-info">1:30 PM</span>
+                        <span class="badge-info">3:00 PM</span>
+                        <span class="badge-info">5:30 PM</span>
+                        <span class="badge-info">7:00 PM</span>
+                        <span class="badge-info">9:30 PM</span>
+                    </div>
+                    <div class="card-footer">
+                        <small>Last updated 3 mins ago</small>
+                    </div>
+                </div>
+
+                <div class="card" id="ghost">
+                    <img src="./img/ghostintheshell.jpg" alt="Ghost in the Shell">
+                    <div class="card-block">
+                        <h4>Ghost in the Shell</h4>
+                        <span class="badge-info">12:00 PM</span>
+                        <span class="badge-info">1:30 PM</span>
+                        <span class="badge-info">3:00 PM</span>
+                        <span class="badge-info">5:30 PM</span>
+                        <span class="badge-info">7:00 PM</span>
+                        <span class="badge-info">9:30 PM</span>
+                    </div>
+                    <div class="card-footer">
+                        <small>Last updated 3 mins ago</small>
+                    </div>
+                </div>
+
+                <div class="card" id="beauty">
+                    <img src="./img/beautyandthebeast.jpg" alt="Beauty and the Beast">
+                    <div class="card-block">
+                        <h4>Beauty and the Beast</h4>
+                        <span class="badge-info">12:00 PM</span>
+                        <span class="badge-info">1:30 PM</span>
+                        <span class="badge-info">3:00 PM</span>
+                        <span class="badge-info">5:30 PM</span>
+                        <span class="badge-info">7:00 PM</span>
+                        <span class="badge-info">9:30 PM</span>
+                    </div>
+                    <div class="card-footer">
+                        <small>Last updated 3 mins ago</small>
+                    </div>
+                </div>
+
+                <div class="card" id="life">
+                    <img src="./img/life.jpg" alt="Life (2017)">
+                    <div class="card-block">
+                        <h4>Life (2017)</h4>
+                        <span class="badge-info">12:00 PM</span>
+                        <span class="badge-info">1:30 PM</span>
+                        <span class="badge-info">3:00 PM</span>
+                        <span class="badge-info">5:30 PM</span>
+                        <span class="badge-info">7:00 PM</span>
+                        <span class="badge-info">9:30 PM</span>
+                    </div>
+                    <div class="card-footer">
+                        <small>Last updated 3 mins ago</small>
+                    </div>
+                </div>
+
+                <div class="card" id="logan">
+                    <img src="./img/logan.jpg" alt="Logan (2017)">
+                    <div class="card-block">
+                        <h4>Logan (2017)</h4>
+                        <span class="badge-info">12:00 PM</span>
+                        <span class="badge-info">1:30 PM</span>
+                        <span class="badge-info">3:00 PM</span>
+                        <span class="badge-info">5:30 PM</span>
+                        <span class="badge-info">7:00 PM</span>
+                        <span class="badge-info">9:30 PM</span>
+                    </div>
+                    <div class="card-footer">
+                        <small>Last updated 3 mins ago</small>
+                    </div>
+                </div>
+
+                <div class="card" id="power">
+                    <img src="./img/powerrangers.jpg" alt="Power Rangers">
+                    <div class="card-block">
+                        <h4>Power Rangers</h4>
+                        <span class="badge-info">12:00 PM</span>
+                        <span class="badge-info">1:30 PM</span>
+                        <span class="badge-info">3:00 PM</span>
+                        <span class="badge-info">5:30 PM</span>
+                        <span class="badge-info">7:00 PM</span>
+                        <span class="badge-info">9:30 PM</span>
+                    </div>
+                    <div class="card-footer">
+                        <small>Last updated 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footerBackground">
+            <footer>
+                <div style="display: flex; justify-content: space-around;">
+                    <div>
+                        <h4 class="footerTitle">Contact Us</h4>
+                        <p class="footerDes"><span class="footerDesLink">Get in touch</span><br><span class="footerDesLink">FAQ's</span><br>
+                            <a class="linkColour" href="https://www.facebook.com"><i class="fa fa-facebook facebookIcon"></i></a>
+                            <a class="linkColour" href="https://twitter.com"><i class="fa fa-twitter twitterIcon"></i></a>
+                            <a class="linkColour" href="https://www.youtube.com"><i class="fa fa-youtube-play youtubeIcon"></i></a>
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="footerTitle">About Academy Cinemas</h4>
+                        <p class="footerDes">
+                            <span class="footerDesLink">About Us</span><br>
+                            <span class="footerDesLink">Cinema Experience</span><br>
+                            <span class="footerDesLink">Gift Cards</span><br>
+                            <span class="footerDesLink">Competitions</span>
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="footerTitle">Legal</h4>
+                        <p class="footerDes">
+                            <span class="footerDesLink">Terms and Conditions</span><br>
+                            <span class="footerDesLink">Privacy Policy</span><br>
+                            <span class="footerDesLink">Accessibility</span>
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div class="footerDarkerBackground">
+            <img class="logoFooter" src="Logo.png" alt="Academy Cinemas Logo">
+        </div>
+    </footer>
+
+    <!-- Include shared navigation bar script -->
+    <script src="navbar.js"></script>
+</body>
+</html>
